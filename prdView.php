@@ -1,7 +1,7 @@
 <?php
 require("prdModel.php");
+checkLogin();
 $result=getPrdList();
-//checkLogin();
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -23,14 +23,16 @@ $result=getPrdList();
 <td>XXX</td>
   </tr>
 <?php
+
 while (	$rs = mysqli_fetch_assoc($result)) {
+
 	echo "<tr><td>" , $rs['prdID'] ,
 	"</td><td>" , $rs['name'],
-	"</td><td>" , $rs['price'];
+	"</td><td>" , $rs['price'],
 $id=$rs['prdID'];
-//echo '<td><a href="03.delete.php?id=', $rs['id'], '">刪</a> </td></tr>';
-echo "<td><a href='03.delete.php?id=$id'>刪</a>";
-echo " - <a href='04.editform.php?id=$id'>改</a> </td></tr>";
+echo "<td> <a href='03.delete.php?id=$id'>刪</a>";
+echo "  <a href='04.editform.php?id=$id'>改</a> </td></tr>";
+
 }
 ?>
 </table>

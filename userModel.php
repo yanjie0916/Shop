@@ -27,5 +27,4 @@ function getRole($id)
 {
     return $_SESSION['role'];
 }
-
 ?>
