@@ -2,7 +2,7 @@
 require("dbconfig.php");
 function getPrdList() 
 {
-        global $db;
+    global $db;
         $sql = "select * from product";
         $stmt = mysqli_prepare($db, $sql);
         //mysqli_stmt_bind_param($stmt, "ss", $id, $pwd);

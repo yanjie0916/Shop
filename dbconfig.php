@@ -2,7 +2,7 @@
 session_start();
 
 $host = 'localhost';
-$user = 'test';
+$user = 'root';
 $pass = '';
 $dbName = 'test';
 $db = mysqli_connect($host, $user, $pass, $dbName) or die('Error with MySQL connection'); //跟MyMSQL連線並登入
@@ -13,5 +13,6 @@ function checkLogin() {
 	if ( ! isset($_SESSION["uID"]) or $_SESSION["uID"] <= 0) {
             header("Location: loginView.php");
 	}
+    exit(0);
 }
 ?>
