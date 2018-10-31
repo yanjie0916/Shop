@@ -13,7 +13,6 @@ function showCart($uID)
     } 
     return NULL;
 }
-
 function add2Cart($prdID, $uID)
 {
     global $db;
@@ -23,13 +22,21 @@ function add2Cart($prdID, $uID)
     mysqli_stmt_execute($stmt); //執行SQL
     return;
 }
-
 function removeCartItem($ID) 
 {
     global $db;
     $sql = "delete from cartitem where serno=?";
     $stmt = mysqli_prepare($db, $sql);
     mysqli_stmt_bind_param($stmt, "i", $ID);
+    mysqli_stmt_execute($stmt); //執行SQL
+    return;
+}
+function removeAllItems($uID)
+{
+    global $db;
+    $sql = "delete from cartitem where uID=?";
+    $stmt = mysqli_prepare($db, $sql);
+    mysqli_stmt_bind_param($stmt, "i", $uID);
     mysqli_stmt_execute($stmt); //執行SQL
     return;
 }

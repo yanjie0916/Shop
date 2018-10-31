@@ -38,5 +38,7 @@ echo " - <a href='04.editform.php?id=$id'>改</a> </td></tr>";
 }
 ?>
 </table>
+
+<a href="showOrder.php">show all order</a>
 </body>
 </html>
