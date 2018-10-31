@@ -1,5 +1,5 @@
 <?php
-require("dbconfig.php");
+require_once("dbconfig.php");
 function getPrdList() 
 {
     global $db;

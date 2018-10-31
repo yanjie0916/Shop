@@ -1,5 +1,5 @@
 <?php
-require("dbconfig.php");
+require_once("dbconfig.php");
 function login($id, $pwd) 
 {
     global $db;
@@ -28,4 +28,8 @@ function getRole()
     return $_SESSION['role'];
 }
 
+function getCurrentUser() 
+{
+    return $_SESSION['uID'];
+}
 ?>
