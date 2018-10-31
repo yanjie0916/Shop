@@ -40,7 +40,7 @@ while (	$rs = mysqli_fetch_assoc($result)) {
     //echo '<td><a href="03.delete.php?id=', $rs['id'], '">刪</a> </td></tr>';
     echo "<td><a href='removeFromCart.php?id=$id'>刪</a>";
 }
-echo "<tr><td>Total: $tot</td><td><a href='checkout.php'>結帳</a></td></tr>";
+echo "<tr><td>Total: $tot</td><td><a href='checkout.php'>結帳</a></td><td><a href='prdView.php'>Keepshopping</a></td></tr>";
 ?>
 </table>
 </body>
