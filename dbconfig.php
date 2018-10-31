@@ -2,7 +2,7 @@
 session_start();
 
 $host = 'localhost';
-$user = 'root';
+$user = 'test';
 $pass = '';
 $dbName = 'test';
 $db = mysqli_connect($host, $user, $pass, $dbName) or die('Error with MySQL connection'); //跟MyMSQL連線並登入
